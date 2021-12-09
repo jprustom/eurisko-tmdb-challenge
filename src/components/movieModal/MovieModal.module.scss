@@ -1,0 +1,28 @@
+.ReleaseDateContainer{
+    font-size:1rem;
+    text-align: center;
+}
+.NetflixLinkContainer{
+    display: flex;
+    justify-content: center;
+    padding:0;
+    align-items: center;
+    transition:background-color .3s ease;
+    cursor: pointer;
+    &>.NetflixLink{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color:white;
+        display: block;
+        text-align: center;
+        transition:color .4s ease-out;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &:hover{
+        background-color: green !important;
+        
+    }
+}

@@ -1,0 +1,7 @@
+.SrollHorizontally{
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    // align-items:  stretch;
+}
