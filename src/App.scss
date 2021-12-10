@@ -16,6 +16,13 @@
 .card{
   height:100%
 }
+.modal-content{
+  width:30vw;
+  height:90vh;
+  overflow-y:auto;
+  margin-left:50%;
+  transform:translateX(-50%)
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

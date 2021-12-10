@@ -14,14 +14,13 @@ const MovieModal = () => {
   const displayGenres = useCallback(() => `${selectedMovie?.genres.map((({ name }) => name)).join()}`, [selectedMovie]);
   const onHideHandler = () => dispatch(clearMovieDetails());
 
-  if (!selectedMovie) { return null; }
   const {
     release_date: releaseDate, homepage, title, overview, vote_average: voteAverage,
     backdrop_path: backdropPath,
-  } = selectedMovie;
+  } = selectedMovie ?? {};
 
   return (
-    <Modal data-testid="movieDetails" className={`${MovieModalStyles.Modal}`} show={selectedMovie} onHide={onHideHandler}>
+    <Modal className={`${MovieModalStyles.Modal}`} show={selectedMovie} onHide={onHideHandler}>
       {
                     selectedMovie
                       ? (
@@ -42,7 +41,7 @@ const MovieModal = () => {
                             </p>
                             <p>
                               Released on
-                              {releaseDate.replaceAll('-', '/')}
+                              {` ${releaseDate.replaceAll('-', '/')}`}
                             </p>
                           </Modal.Body>
                           <Modal.Footer onClick={() => window.open(homepage)} className={`${MovieModalStyles.NetflixLinkContainer} bg-primary`}>

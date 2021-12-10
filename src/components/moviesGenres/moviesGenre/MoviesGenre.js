@@ -23,7 +23,7 @@ const MoviesGenre = ({ genreName, genreId }) => {
         Or maybe I should have used bootstrap's flex classes? */}
         <div className={`movies-container mt-7 p-2 text-center ${MoviesGenreStyles.SrollHorizontally}`}>
           {
-                            moviesGenre.map(
+                            moviesGenre?.map(
                               ({
                                 id, release_date: releaseDate, title, vote_average: voteAverage,
                                 poster_path: posterPath,
